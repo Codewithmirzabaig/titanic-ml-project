@@ -1,0 +1,80 @@
+📄 Titanic Survival Prediction – Project Report
+🔹 1. Objective
+
+The objective of this project is to build a predictive model that can determine whether a passenger survived the Titanic disaster based on available features such as age, gender, passenger class, and other attributes. The task focuses on applying data preprocessing, machine learning modeling, and evaluation techniques using Python and Scikit-learn.
+
+🔹 2. Dataset Description
+
+The dataset used for this project is the Titanic Dataset Kaggle, which contains passenger-level information.
+
+Key Features:
+Survived (Target Variable): 0 = No, 1 = Yes
+Pclass: Passenger class (1st, 2nd, 3rd)
+Sex: Gender of passenger
+Age: Age in years
+SibSp: Number of siblings/spouses aboard
+Parch: Number of parents/children aboard
+Fare: Ticket fare
+Embarked: Port of embarkation
+🔹 3. Approach and Methodology
+Step 1: Data Loading and Exploration
+
+The dataset was loaded using Pandas and explored using functions such as .head(), .info(), and .describe(). Missing values and data types were identified during this stage.
+
+Step 2: Data Preprocessing
+Handling Missing Values:
+
+Missing values in the Age column were replaced using the median value to handle skewness and outliers.
+Missing values in the Embarked column were filled using the mode (most frequent value).
+Dropping Irrelevant Columns:
+Columns such as Name, Ticket, Cabin, and PassengerId were removed as they do not contribute significantly to prediction or contain excessive missing values.
+Encoding Categorical Variables:
+Categorical features like Sex and Embarked were converted into numerical format using label encoding.
+Step 3: Feature Selection
+The target variable was Survived.
+All remaining columns were used as input features.
+Step 4: Train-Test Split
+
+The dataset was divided into training and testing sets using an 80:20 ratio to ensure proper model evaluation on unseen data.
+
+Step 5: Model Building
+
+A classification model was built using Logistic Regression.
+
+This model was selected because:
+
+It is suitable for binary classification problems
+It is simple, interpretable, and efficient for beginner-level datasets
+Step 6: Model Evaluation
+
+The model performance was evaluated using:
+
+Accuracy Score
+Confusion Matrix
+Classification Report (Precision, Recall, F1-score)
+🔹 4. Model Performance
+The model achieved an accuracy between 75% and 85% (depending on dataset variation).
+The confusion matrix showed a balanced prediction between survivors and non-survivors.
+Precision and recall values indicated that the model performs reasonably well in identifying survival outcomes.
+🔹 5. Observations
+Gender (Sex) had a strong influence on survival; female passengers had a higher survival rate.
+Passenger Class (Pclass) significantly impacted survival; first-class passengers had better chances.
+Age showed moderate influence, with children having slightly higher survival rates.
+Features like Fare and family-related variables also contributed to predictions.
+🔹 6. Conclusion
+
+The Logistic Regression model successfully demonstrated how machine learning can be applied to predict outcomes based on structured data. The model achieved good accuracy and provided meaningful insights into survival patterns.
+
+Although the model is relatively simple, it highlights the importance of data preprocessing, feature selection, and evaluation in building effective predictive systems. Future improvements can include using advanced models such as Decision Trees or Random Forests to enhance performance.
+
+🔹 7. Future Improvements
+Use advanced algorithms like Random Forest or Gradient Boosting
+Perform feature engineering (e.g., family size, title extraction)
+Apply cross-validation for more robust evaluation
+Tune hyperparameters to improve accuracy
+🔹 8. Tools and Technologies Used
+Python
+Pandas
+NumPy
+Scikit-learn
+Jupyter Notebook
